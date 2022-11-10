@@ -1,0 +1,59 @@
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo {
+    padding: 0;
+    height: 40px;
+    width: 89px;
+    display: block;
+    margin-bottom: 0;
+}
+
+.header__date {
+    padding: 0;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.2;
+    margin: 0;
+    margin-left: 24px;
+}
+
+.header__button {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+    margin: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    width: 116px;
+    height: 24px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+.header__profileName {
+    margin: 0;
+    margin-left: 20px;
+    padding: 0;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.25;
+}
+
+.header__profileAvatar {
+    display: block;
+    margin-left: 12px;
+    width: 40px;
+    height: 40px;
+}
