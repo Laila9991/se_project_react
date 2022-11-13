@@ -1,0 +1,8 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    max-height: 20px;
+    font-family: CabinetGrotesk-Medium;
+    line-height: 20px;
+  }

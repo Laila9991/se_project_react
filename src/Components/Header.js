@@ -2,7 +2,7 @@ import React from "react";
 
  import "../Blocks/Header.css";   
  import logo from  '../images/logoWtwr.svg';
- import avatar from "../images/avatar.svg"
+ import avatar from "../images/avatarLogo.svg";
 
  function Header() {
 
@@ -16,8 +16,8 @@ import React from "react";
             </div>
             <div className="header__wrapper">
                 <button className="header__button">+ Add clothes</button>
-                <p className="header__profileName">Terrence Tegegne</p>
-                <img className="header__profileAvatar" alt="Terrence Tegegne" src={avatar}/> 
+                <p className="header__profileName">Laila</p>
+                <img className="header__profileAvatar" alt="Laila" src={avatar}/> 
             </div>
         </header>
     );
