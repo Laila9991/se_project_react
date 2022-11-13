@@ -12,11 +12,11 @@ import {
     latitude,
     longitude,
     defaultClothingItems,
-  } from "../../utils/constants";
+  } from "../utils/constant";
   import {
     getForcastWeather,
     filterDataFromWeatherApi,
-  } from "../../utils/WeatherApi";
+  } from "../utils/WeatherApi";
 
 
 
