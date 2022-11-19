@@ -3,11 +3,11 @@
 
 import "../Components/ModalWithForm";
 
-function ModalWithForm({ isOpen, name, title, buttonText, onClose, children }) {
+function ModalWithForm({ Open, name, title, buttonText, onClose, children }) {
   return (
     <div
       className={
-        isOpen ? `modal modal_type_${name}` : `modal_type_${name} modal_hidden`
+        Open ? `modal modal_type_${name}` : `modal_type_${name} modal_hidden`
       }
     >
       <div className="modal__form-container">

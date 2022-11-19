@@ -1,4 +1,4 @@
-const getForcastWeather = (latitude, longitude, apiKey) => {
+export const getForcastWeather = (latitude, longitude, apiKey) => {
     return fetch(
       `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${apiKey}`
     ).then((res) => {
@@ -10,7 +10,7 @@ const getForcastWeather = (latitude, longitude, apiKey) => {
     });
   };
   
-  const filterDataFromWeatherApi = (data) => {
+  export const filterDataFromWeatherApi = (data) => {
     if (!data) {
       return null;
     }

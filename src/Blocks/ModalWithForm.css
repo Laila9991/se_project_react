@@ -1,43 +1,140 @@
-.weathercard {
-    width: 100%;
-    height: 80px;
-    margin-top: 28px;
-    border-radius: 12px;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    overflow: hidden;
-  }
-  
-  .weathercard__temp {
-    padding: 0;
-    margin: 0;
-    margin-left: 16px;
-    align-self: center;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.11;
-  }
-  
-  .weathercard__image-wrapper {
-    position: relative;
-  }
-  
-  .weathercard__image {
-    padding: 0;
-    margin: 0;
-    position: absolute;
-    right: 0;
-  }
-  
-  .weathercard__background-day {
-    background: #00a3ff;
-  }
-  
-  .weathercard__background-day-precipitation {
-    background: #6ca6c7;
-  }
-  
-  .weathercard__background-night {
-    background: #286897;
-  }
+.modal {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.modal_hidden {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  display: none;
+}
+
+.modal__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 498px;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.modal__image {
+  width: 498px;
+  height: 498px;
+  margin-bottom: 20px;
+}
+
+.modal__exit {
+  background-image: url("../images/fromCloseButton.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 27px;
+  right: 27px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 0;
+}
+
+.modal__exit:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.modal__name {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  margin-bottom: 12px;
+  margin-left: 32px;
+  margin-top: 0;
+}
+
+.modal__weather {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  margin-bottom: 32px;
+  margin-left: 32px;
+  margin-top: 0;
+}
+
+.modal__form-container {
+  width: 498px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #fff;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 28px 28px 36px;
+  box-sizing: border-box;
+}
+
+.modal__form-exit {
+  background-image: url( "../images/closeImageButton.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0);
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 22px;
+  right: 30px;
+  border: none;
+}
+
+.modal__form-title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  margin-bottom: 24px;
+}
+
+.form {
+  width: 440px;
+  margin: auto;
+}
+
+.form__label {
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  margin-top: 0;
+}
+
+.form__input {
+  margin-bottom: 24px;
+  height: 32px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #000;
+  padding: 0;
+}
+
+.form__radio-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 4px;
+  row-gap: 8px;
+  margin-bottom: 32px;
+}
+
+
+
+

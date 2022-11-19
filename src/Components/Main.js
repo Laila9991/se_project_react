@@ -4,62 +4,60 @@ import ItemCard from "../Components/ItemCard";
 import WeatherCard from "../Components/WeatherCard";
 
 function Main({ weatherData, defaultClothing, handleCardClick }) {
-    const actualWeather = weatherData.temperature;
-    const weatherType = () => {
-      if (actualWeather >= 86) {
-        return "hot";
-      } else if (actualWeather >= 66 && actualWeather <= 85) {
-        return "warm";
-      } else if (actualWeather <= 65) {
-        return "cold";
-      }
-    };
-  
-    function filterClothing(card, data) {
-      if (card.weather === data) {
-        return true;
-      } else {
-        return false;
-      }
+  const currentWeather = weatherData.temperature;
+
+
+const HOT_WEATHER = 86;
+  const COLD_WEATHER = 64;
+
+  const getWeatherType = () => {
+    if (currentWeather >= HOT_WEATHER) {
+      return "hot";
+    } else if (
+      currentWeather >= COLD_WEATHER - 1 &&
+      currentWeather <= HOT_WEATHER - 1
+    ) {
+      return "warm";
+    } else if (currentWeather <= COLD_WEATHER) {
+      return "cold";
     }
-    const clothingOptions = defaultClothing.filter((item) =>
-      filterClothing(item, weatherType())
-    );
-  
-    return (
-      <div className="main">
-        <WeatherCard weatherData={weatherData} />
-        <section className="main__clothes">
-          <div className="main__info">
-            <div className="main__description-container">
-              <p className="main__description">
-                Today is {actualWeather}°F and it is {weatherType()} / You may
-                want to wear:
-              </p>
-            </div>
-          </div>
-          <ul className="main__items">
-            {clothingOptions.map((item) => {
-              return (
-                <ItemCard
-                  isOpen="false"
-                  clothingOption={item}
-                  key={item._id}
-                  name={item.name}
-                  image={item.link}
-                  weather={item.weather}
-                  onClick={() => {
-                    handleCardClick(item);
-                  }}
-                />
-              );
-            })}
-          </ul>
-        </section>
-      </div>
-    );
+  };
+
+  function filterClothing(card) {
+    if (card.weather === getWeatherType()) {
+      return true;
+    } else {
+      return false;
+    }
   }
-  
+
+  const clothingOptions = defaultClothing.filter((items) =>
+    filterClothing(items)
+  );
+
+  return (
+    <main className="main">
+      <WeatherCard weatherData={weatherData} />
+      <h3 className="main__header">
+        Today is {Math.round(currentWeather)}&deg;F / You may want to wear:
+      </h3>
+      <ul className="main__gallery">
+        {clothingOptions.map((item) => (
+          <ItemCard
+            isOpen="false"
+            clothingOption={item}
+            key={item._id}
+            name={item.name}
+            image={item.link}
+            weather={item.weather}
+            onClick={() => handleCardClick(item)}
+          />
+        ))}
+      </ul>
+    </main>
+  );
+}
+
   export default Main;
   
   

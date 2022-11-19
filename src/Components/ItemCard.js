@@ -1,12 +1,20 @@
 import "../Blocks/ItemCard.css";
 
-function ItemCard({ image, name, onClick }) {
+
+function ItemCard({ clothingOption, onClick }) {
   return (
-    <li className="card">
-      <img className="card__image" src={image} alt={name} onClick={onClick} />
-      <div className="card__title">{name}</div>
+    <li className="card" onClick={onClick}>
+      <h5 className="card__title">{clothingOption.name}</h5>
+      <img
+        className="card__image"
+        src={clothingOption.link}
+        alt={clothingOption.name}
+      />
     </li>
   );
 }
 
+
 export default ItemCard;
+
+
