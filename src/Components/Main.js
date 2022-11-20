@@ -1,7 +1,7 @@
 
 import "../Blocks/Main.css";
-import ItemCard from "../Components/ItemCard";
-import WeatherCard from "../Components/WeatherCard";
+import ItemCard from "../components/ItemCard";
+import WeatherCard from "../components/WeatherCard";
 
 function Main({ weatherData, defaultClothing, handleCardClick }) {
   const currentWeather = weatherData.temperature;

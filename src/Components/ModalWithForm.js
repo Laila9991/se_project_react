@@ -1,7 +1,7 @@
 
 
 
-import "../Components/ModalWithForm";
+import "../components/ModalWithForm";
 
 function ModalWithForm({ Open, name, title, buttonText, onClose, children }) {
   return (

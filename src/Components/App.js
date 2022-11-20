@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 
 import "../Blocks/App.css";
-import Header from "../Components/Header";
-import Main from "../Components/Main";
-import ModalWithForm from "../Components/ModalWithForm";
-import ItemModal from "../Components/ItemModal";
-import Footer from "../Components/Footer";
+import Header from "./Header";
+import Main from "./Main";
+import ModalWithForm from "./ModalWithForm";
+import ItemModal from "./ItemModal";
+import Footer from "./Footer";
 
 import {
     apiKey,
