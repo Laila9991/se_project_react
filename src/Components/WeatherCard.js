@@ -7,7 +7,7 @@ import "../Blocks/WeatherCard.css";
 function WeatherCard({ weatherData }) {
     if (!weatherData) return null;
   
-    function selectWeatherCondition(weatherData) {
+    function selectWeatherCondition( weatherData) {
       const weatherCondition = weatherData?.condition?.toLowerCase() || "";
       if (weatherCondition === null) return "";
       if (weatherCondition.includes("clear")) {

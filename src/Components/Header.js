@@ -15,7 +15,7 @@ import React from "react";
                 <p className="header__date">{currentDate}, Culemborg</p>
             </div>
             <div className="header__wrapper">
-                <button className="header__button">+ Add clothes</button>
+                <button className="header__button">+Add clothes</button>
                 <p className="header__profileName">Laila</p>
                 <img className="header__avatar" alt="Laila" src={avatar}/> 
             </div>

@@ -8,7 +8,7 @@ function Main({ weatherData, defaultClothing, handleCardClick }) {
 
 
 const HOT_WEATHER = 86;
-  const COLD_WEATHER = 64;
+  const COLD_WEATHER =  64;
 
   const getWeatherType = () => {
     if (currentWeather >= HOT_WEATHER) {

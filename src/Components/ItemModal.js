@@ -23,7 +23,7 @@ function ItemModal({ Open, name, card, onClose }) {
           className="item-modal__image"
         />
         <p className="item-modal__title">{card.name}</p>
-        <p className="item-modal__desc">Weather: {card.weather}</p>
+        <p className="item-modal__desc">Weather : {card.weather}</p>
       </div>
     </div>
   );
