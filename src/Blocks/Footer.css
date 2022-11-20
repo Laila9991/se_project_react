@@ -1,19 +1,18 @@
 
 .footer {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    padding-top: 85px;
-    padding-bottom: 24px;
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1360px;
+  max-height: 20px;
 }
 
 .footer__text {
-  padding: 0;
-  margin: 0;
-  font-weight: 500;
-  font-size: 16px;
-
-  line-height: 1.25;
+  color: #545454;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  padding-top: 50px;
+  padding-bottom: 60px;
+  margin-top: 0;
+  margin-bottom: 0;
 }

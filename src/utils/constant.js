@@ -6,25 +6,25 @@ const latitude =  "47.0002";
 const longitude = "8.0143";
 
 const weatherConditions = {
-  sunday: "/sunday.svg",
-  cloudday: "/cloudday.svg",
-  rainday: "/rainday.svg",
-  stormday: "/stormday.svg",
-  snowday: "/snowday.svg",
-  fogday: "/fogday.svg",
-  sunnight: "/sunnight.svg",
-  cloudnight: "/cloudnight.svg",
-  rainnight: "/rainnight.svg",
-  stormnight: "/stormnight.svg",
-  snownight: "/snownight.svg",
-  fognight: "/fognight.svg",
+  sunday: "./images/sunday.svg",
+  cloudday: "./images/cloudday.svg",
+  rainday: "./images/rainday.svg",
+  stormday: "./images/stormday.svg",
+  snowday: "./images/snowday.svg",
+  fogday: "./images/fogday.svg",
+  sunnight: "./images/sunnight.svg",
+  cloudnight: "./images/cloudnight.svg",
+  rainnight: "./images/rainnight.svg",
+  stormnight: "./images/stormnight.svg",
+  snownight: "./images/snownight.svg",
+  fognight: "./images/fognight.svg",
 };
 
 const defaultClothingItems = [
     {
       _id: 0,
       name: "Cap",
-      weather: "hot",
+      weather: "cold",
       link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Cap.png?etag=f3dad389b22909cafa73cff9f9a3d591",
     },
     {
