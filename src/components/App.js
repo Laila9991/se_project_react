@@ -64,7 +64,7 @@ const App = () => {
         </div>
         {activeModal === "add" && (
           <ModalWithForm
-            Open={activeModal === "add"}
+          isOpen={activeModal === "add"}
             name="add"
             title="New Garment"
             buttonText="Add Garment"
@@ -130,7 +130,7 @@ const App = () => {
           </ModalWithForm>
         )}
         <ItemModal
-          Open={activeModal === "preview"}
+          isOpen={activeModal === "preview"}
           name={"preview"}
           card={selectedCard}
           onClose={closeModal}

@@ -124,6 +124,7 @@
   border: none;
   border-bottom: 1px solid #000;
   padding: 0;
+  background-color: blue;
 }
 
 .form__radio-container {

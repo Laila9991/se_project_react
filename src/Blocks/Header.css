@@ -5,59 +5,59 @@
     max-width: 1360px;
     margin: 0 auto 28px;
     height: 40px;
-}
-
-.header__wrapper {
+  }
+  
+  .header__container-weather {
     display: flex;
     align-items: center;
-}
-
-.header__logo {
-    padding: 0;
-   
+  }
+  
+  .header__logo {
+    display: flex;
+    max-width: 89px;
     height: 40px;
-    width: 89px;
-    display: block;
-    margin-bottom: 0;
-}
-
-.header__date {
-    padding: 0;
-    font-weight: 700;
+    margin-right: 24px;
+  }
+  
+  .header__date-and-city {
+    display: flex;
     font-size: 20px;
-    line-height: 1.2;
-    margin: 0;
-    margin-left: 24px;
-}
-
-.header__button {
-    background: none;
-	color: inherit;
-	border: none;
-	padding: 0;
-    margin: 0;
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;
-    width: 116px;
+    line-height: 24px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  
+  .header__container-user {
+    display: flex;
+    align-items: center;
+  }
+  .header__button {
+    display: flex;
     height: 24px;
-    font-weight: 700;
+    max-width: 116px;
     font-size: 20px;
-    line-height: 1.2;
-}
-
-.header__profileName {
-    
-    padding-left: 20;
     font-weight: 700;
-    font-size: 20px;
-    line-height: 1.25;
-
-}
-
-.header__profileAvatar {
-    display: block;
-    margin-left: 12px;
-    width: 40px;
+    line-height: 24px;
+    border: none;
+    white-space: nowrap;
+    margin-right: 20px;
+    padding: 0;
+  }
+  
+  .header__button:hover {
+    display: flex;
+    cursor: pointer;
+    opacity: 0.6;
+  }
+  
+  .header__user {
+    display: flex;
+    margin-right: 12px;
+  }
+  
+  .header__avatar {
+    display: flex;
     height: 40px;
-}
+    max-width: 40px;
+    box-sizing: border-box;
+  }
