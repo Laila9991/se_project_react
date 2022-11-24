@@ -1,13 +1,13 @@
 
 
 
-import "./ModalWithForm";
+import "../Blocks/ModalWithForm.css";
 
-function ModalWithForm({ Open, name, title, buttonText, onClose, children }) {
+function ModalWithForm({ isOpen, name, title, buttonText, onClose, children }) {
   return (
     <div
       className={
-        Open ? `modal modal_type_${name}` :  `modal_type_${name} modal_hidden`
+        isOpen ? `modal modal_type_${name}` :  `modal_type_${name} modal_hidden`
       }
     >
       <div className="modal__form-container">

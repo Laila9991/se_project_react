@@ -1,11 +1,11 @@
 
 import "../Blocks/ItemModal.css";
 
-function ItemModal({ Open, name, card, onClose }) {
+function ItemModal({ isOpen, name, card, onClose }) {
   return (
     <div
       className={
-        Open
+        isOpen
           ? `item-modal modal_type_${name}`
           : `modal_type_${name} item-modal_hidden`
       }
