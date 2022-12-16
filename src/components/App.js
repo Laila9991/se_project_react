@@ -7,6 +7,9 @@ import Main from "./Main.js";
 import ModalWithForm from "./ModalWithForm";
 import ItemModal from "./ItemModal";
 import Footer from "./Footer";
+import CurrentTemperatureUnitContext from "./currentTemperatureUnitContext.js";
+import Profile from "./Profile.js";
+
 
 import {
     apiKey,
@@ -25,6 +28,7 @@ const App = () => {
     const [weatherData, setWeatherData] = useState({});
     const [activeModal, setActiveModal] = useState("");
     const [selectedCard, setSelectedCard] = useState({});
+
   
     const closeModal = () => {
       setActiveModal(false);
@@ -44,24 +48,44 @@ const App = () => {
           .catch((err) => console.log(err));
       }
     }, []);
+
+    const [currentTemperatureUnit, setCurrentTemperatureUnit] = useState("F");
+
+    const handleToggleChange = () => {
+      currentTemperatureUnit === "F"
+        ? setCurrentTemperatureUnit("C")
+        : setCurrentTemperatureUnit("F");
+    };
   
     return (
       <div className="app">
-        <div>
+        
+
+<CurrentTemperatureUnitContext.Provider
+        value={{ currentTemperatureUnit, handleToggleChange }}
+      >
+        
+ 
           <Header
             weatherData={weatherData}
             openModal={() => {
               setActiveModal("add");
             }}
-          />
-          <Main
-            weatherData={weatherData}
-            defaultClothing={defaultClothingItems}
-            handleCardClick={handleCardClick}
-          />
-  
-          <Footer />
-        </div>
+            />
+            <Main
+              weatherData={weatherData}
+              defaultClothing={defaultClothingItems}
+              handleCardClick={handleCardClick}
+            />
+            <Profile
+              defaultClothing={defaultClothingItems}
+              handleCardClick={handleCardClick}
+              openModal={() => {
+                setActiveModal("add");
+              }}
+            />
+            <Footer />
+        
         {activeModal === "add" && (
           <ModalWithForm
           isOpen={activeModal === "add"}
@@ -135,9 +159,15 @@ const App = () => {
           card={selectedCard}
           onClose={closeModal}
         />
+
+</CurrentTemperatureUnitContext.Provider>
       </div>
     );
   };
+
+
+  
+  
 
 export default App;
 

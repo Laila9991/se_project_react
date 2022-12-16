@@ -1,7 +1,8 @@
-
+import React, { useContext } from "react";
 import "../Blocks/Main.css";
 import ItemCard from "./ItemCard";
 import WeatherCard from "./WeatherCard";
+import currentTemperatureUnitContext from "./currentTemperatureUnitContext";
 
 function Main({ weatherData, defaultClothing, handleCardClick }) {
   const currentWeather = weatherData.temperature;
@@ -35,11 +36,17 @@ const HOT_WEATHER = 86;
     filterClothing(items)
   );
 
+  const { currentTemperatureUnit } = useContext(currentTemperatureUnitContext);
+
   return (
     <main className="main">
       <WeatherCard weatherData={weatherData} />
       <h3 className="main__header">
-        Today is {Math.round(currentWeather)}&deg;F / You may want to wear:
+      Today is{" "}
+              {currentTemperatureUnit === "F"
+                ? weatherData.temperatureF
+                : weatherData.temperatureC}{" "}
+              and it is {getWeatherType()} / You may want to wear:
       </h3>
       <ul className="main__gallery">
         {clothingOptions.map((item) => (
