@@ -29,7 +29,7 @@ import { NavLink } from "react-router-dom";
             + Add clothes
           </button>
           <NavLink to="/profile" activeClassName="menu__item-active">
-          <p className="header__user">Terrence Tegegne</p>
+          <p className="header__user"></p>
         </NavLink>
           <p className="header__user">Laila</p>
           <img className="header__avatar" src={avatar} alt="user avatar" />
