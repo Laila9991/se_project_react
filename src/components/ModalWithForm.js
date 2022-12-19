@@ -3,7 +3,7 @@
 
 import "../Blocks/ModalWithForm.css";
 
-function ModalWithForm({ isOpen, name, title, buttonText, onClose, children }) {
+function ModalWithForm({ isOpen, name, title, buttonText, onClose, children, handleSubmit }) {
   return (
     <div
       className={
@@ -19,7 +19,11 @@ function ModalWithForm({ isOpen, name, title, buttonText, onClose, children }) {
         <h3 className="modal__form-title">{title}</h3>
         <form className="form" name={name}>
           {children}
-          <button className="form__submit" type="submit">
+          <button
+            className="form__submit"
+            type="submit"
+            onSubmit={handleSubmit}
+          >
             {buttonText}
           </button>
         </form>

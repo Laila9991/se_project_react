@@ -4,7 +4,7 @@ import "../Blocks/Profile.css";
 import "../Blocks/ItemCard.css";
 import ItemCard from "./ItemCard.js";
 
-function ClothesSection({ defaultClothing, handleCardClick, openModal }) {
+function ClothesSection({ defaultClothing = [], handleCardClick, openModal }) {
   return (
     <div className="profile__clothing-section">
       <div className="profile__clothing-header">
@@ -14,7 +14,7 @@ function ClothesSection({ defaultClothing, handleCardClick, openModal }) {
         </button>
       </div>
       <ul className="profile__card-list">
-        {defaultClothing.map((item) => {
+        {defaultClothing?.map((item) => {
           return (
             <ItemCard
               isOpen="false"

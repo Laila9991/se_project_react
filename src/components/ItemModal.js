@@ -1,7 +1,7 @@
 
 import "../Blocks/ItemModal.css";
 
-function ItemModal({ isOpen, name, card, onClose }) {
+function ItemModal({ isOpen, name, card, onClose, handleDeleteModal }) {
   return (
     <div
       className={
@@ -24,6 +24,13 @@ function ItemModal({ isOpen, name, card, onClose }) {
         />
         <p className="item-modal__title">{card.name}</p>
         <p className="item-modal__desc">Weather : {card.weather}</p>
+        <button
+          type="button"
+          className="item-modal__delete"
+          onClick={handleDeleteModal}
+        >
+          Delete Item
+        </button>
       </div>
     </div>
   );

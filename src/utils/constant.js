@@ -2,8 +2,8 @@ const apiKey = 'bb7308a77e54cc199ae86a913edee4d4';
 
 //export const location = {lon: 8.0143, lat: 47.0002};
 
-const latitude =  "47.0002";
-const longitude = "8.0143";
+const latitude =  "46.8182";
+const longitude = "8.2275";
 
 const weatherConditions = {
   sunday: "./images/sunday.svg",
