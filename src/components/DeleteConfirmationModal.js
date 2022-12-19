@@ -1,6 +1,6 @@
 
 import React from "react";
-import "../ModalWithForm.css";
+import "../Blocks/ModalWithForm.css";
 
 
 function DeleteConfirmationModal({
