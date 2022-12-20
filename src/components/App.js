@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "../Blocks/App.css";
 import Header from "./Header";
 import Main from "./Main.js";
@@ -116,7 +116,7 @@ const App = () => {
                 setActiveModal("add");
               }}
             />
-            <Switch>
+            <Routes>
               <Route exact path="/">
                 <Main
                   weatherData={weatherData}
@@ -133,7 +133,7 @@ const App = () => {
                   }}
                 />
               </Route>
-            </Switch>
+            </Routes>
             <Footer />
           </div>
           {activeModal === "add" && (
