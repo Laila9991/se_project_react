@@ -60,3 +60,6 @@ const defaultClothingItems = [
   ] 
 
   export {  apiKey, latitude, longitude,defaultClothingItems, weatherConditions};
+
+
+

@@ -117,22 +117,24 @@ const App = () => {
               }}
             />
             <Routes>
-              <Route exact path="/">
-                <Main
+              <Route exact path="/" element={
+              
+              <Main
                   weatherData={weatherData}
                   clothingItems={clothingItems}
                   handleCardClick={handleCardClick}
                 />
-              </Route>
-              <Route path="/profile">
-                <Profile
+                }/>
+
+              <Route path="/profile" element={ <Profile
                   clothingItems={clothingItems}
                   handleCardClick={handleCardClick}
                   openModal={() => {
                     setActiveModal("add");
                   }}
                 />
-              </Route>
+                }/>
+             
             </Routes>
             <Footer />
           </div>
