@@ -3,7 +3,7 @@ import "../Blocks/ToggleSwitch.css";
 import currentTemperatureUnitContext from "./currentTemperatureUnitContext.js";
 
 const ToggleSwitch = () => {
-  const { currentTemperatureUnit, handleToggleChange } = useContext(
+  const { currentTemperatureUnit, handleToggleSwitchChange } = useContext(
     currentTemperatureUnitContext
   );
 
@@ -20,7 +20,7 @@ const ToggleSwitch = () => {
         name="temperature-checkbox"
         type="checkbox"
         checked={isChecked}
-        onChange={handleToggleChange}
+        onChange={handleToggleSwitchChange}
         value={currentTemperatureUnit}
       />
       <div className="temperature-slider" />

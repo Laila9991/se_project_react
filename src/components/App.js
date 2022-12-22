@@ -81,7 +81,7 @@ const App = () => {
 
     const [currentTemperatureUnit, setCurrentTemperatureUnit] = useState("F");
 
-    const handleToggleChange = () => {
+    const handleToggleSwitchChange = () => {
       currentTemperatureUnit === "F"
         ? setCurrentTemperatureUnit("C")
         : setCurrentTemperatureUnit("F");
@@ -104,7 +104,7 @@ const App = () => {
         
 
 <CurrentTemperatureUnitContext.Provider
-        value={{ currentTemperatureUnit, handleToggleChange }}
+        value={{ currentTemperatureUnit, handleToggleSwitchChange }}
       >
         
  

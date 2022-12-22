@@ -1,0 +1,30 @@
+
+.modal__container-delete {
+   width: 670px;
+   height: 280px;
+   margin: auto;
+   background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    background-color: brown;
+  
+  }
+  
+  .modal__delete {
+ 
+  }
+  
+  .modal__title-delete {
+  
+  }
+  
+  .modal__confirmation {
+
+  }
+  
+  .modal__cancel {
+  
+  }
+  .modal__exit-delete {
+   
+  }
