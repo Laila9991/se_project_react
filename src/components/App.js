@@ -4,7 +4,7 @@ import "../Blocks/App.css";
 import Header from "./Header";
 import Main from "./Main.js";
 
-import ModalWithForm from "./ModalWithForm";
+import ModalWithForm from "./ModalWithForm.js";
 import ItemModal from "./ItemModal";
 import Footer from "./Footer";
 import CurrentTemperatureUnitContext from "./currentTemperatureUnitContext.js";
@@ -156,6 +156,7 @@ const App = () => {
           />
           {activeModal === "delete" && (
             <DeleteConfirmationModal
+            isOpen={ activeModal === "delete" }
               name="delete"
               onClose={onCloseModal}
               handleConfirm={() => handleCardDelete(selectedCard)}

@@ -17,6 +17,7 @@
     display: none;
     max-height: 0px;
     max-width: 0px;
+    
   }
   
   .item-modal__container {
@@ -26,6 +27,7 @@
     background-color: #fff;
     border: 1px solid rgba(0, 0, 0, 0.3);
     position: relative;
+
   }
   
   .item-modal__close {
@@ -44,6 +46,7 @@
     font-size: 16px;
     margin-left: 28px;
     margin-top: 28px;
+
   }
   
   .item-modal__image {
