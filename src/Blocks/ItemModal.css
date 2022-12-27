@@ -48,6 +48,18 @@
     margin-top: 28px;
 
   }
+
+  .item-modal__delete {
+    border-style: none;
+    background-color: rgba(0, 0, 0, 0);
+    color: #ff4d00;
+    position: absolute;
+    bottom: 68px;
+    right: 32px;
+    font-size: 20px;
+    line-height: 24px;
+    cursor: pointer;
+  }
   
   .item-modal__image {
     width: 498px;
