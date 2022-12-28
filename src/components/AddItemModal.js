@@ -4,6 +4,7 @@ import ModalWithForm from "./ModalWithForm.js";
 const AddItemModal = ({ isOpen, onCloseModal, onAddItem }) => {
   const [name, setName] = React.useState("");
   const [imageUrl, setImageUrl] = React.useState("");
+
   const [weatherType, setWeatherType] = React.useState("");
 
   const handleName = (e) => {
@@ -32,7 +33,6 @@ const AddItemModal = ({ isOpen, onCloseModal, onAddItem }) => {
       onClose={onCloseModal}
       onAddItem={onAddItem}
       handleSubmit={handleSubmit}
-      handleName={handleName}
       handleWeather={handleWeather}
       handleImageChange={handleUrl}
     >

@@ -19,13 +19,10 @@ function ModalWithForm({ isOpen, name, title, buttonText, onClose, children, han
         <h3 className="modal__form-title">{title}</h3>
         <form className="form" name={name}>
           {children}
-          <button
-            className="form__submit"
-            type="submit"
-            onSubmit={handleSubmit}
-          >
+          <button className="form__submit" type="submit">
             {buttonText}
           </button>
+          
         </form>
       </div>
     </div>
