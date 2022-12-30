@@ -40,7 +40,7 @@ const App = () => {
   const handleAddItemSubmit = (name, link, weather) => {
     addItem(name, link, weather)
       .then((item) => {
-        setClothingItems([item, ...clothingItems]);
+        setClothingItems([...clothingItems, item]);
         onCloseModal();
       })
       .catch((err) => console.log(err));

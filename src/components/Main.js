@@ -24,12 +24,11 @@ const HOT_WEATHER = 86;
     }
   };
 
-  function filterClothing(card) {
-    if (card.weather === getWeatherType()) {
-      return true;
-    } else {
-      return false;
-    }
+  function filterClothing(card, data) {
+    return (
+      card.weather?.toLowerCase() === data ||
+      card.weatherType?.toLowerCase() === data
+    );
   }
 
   const clothingOptions = clothingItems.filter((items) =>
