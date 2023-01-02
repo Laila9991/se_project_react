@@ -16,7 +16,7 @@ import { NavLink } from "react-router-dom";
     return (
       <header className="header">
         <div className="header__container-weather">
-        <NavLink exact to="/" activeClassName="menu__item-active">
+        <NavLink  to="/" className="menu__item-active">
           <img src={logo} alt="WTWR logo" className="header__logo" />
         </NavLink>
           <p className="header__date-and-city">
@@ -28,7 +28,7 @@ import { NavLink } from "react-router-dom";
           <button type="button" className="header__button" onClick={openModal}>
             + Add clothes
           </button>
-          <NavLink to="/profile" activeClassName="menu__item-active">
+          <NavLink to="/profile" className="menu__item-active">
           <p className="header__user"></p>
         </NavLink>
           <p className="header__user">Laila</p>

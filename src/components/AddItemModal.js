@@ -31,10 +31,7 @@ const AddItemModal = ({ isOpen, onCloseModal, onAddItem }) => {
       title="New garment"
       buttonText="Add garment"
       onClose={onCloseModal}
-      onAddItem={onAddItem}
       handleSubmit={handleSubmit}
-      handleWeather={handleWeather}
-      handleImageChange={handleUrl}
     >
       <h4 className="form__label">Name</h4>
       <input

@@ -48,11 +48,11 @@ const HOT_WEATHER = 86;
               and it is {getWeatherType()} / You may want to wear:
       </h3>
       <ul className="main__gallery">
-        {clothingOptions.map((item) => (
+        {clothingOptions.map((item, index) => (
           <ItemCard
             isOpen="false"
             clothingOption={item}
-            key={item._id}
+            key={index}
             name={item.name}
             image={item.imageUrl}
             weather={item.weather}
